@@ -10,6 +10,6 @@ public class MethodLesson9{
 				,weight,height,bmi);
 	}
 	public static double calcBMI(double weightKg,double heightCm){
-		return weightKg/(heightCm/100*heightCm/100);
+		return weightKg/((heightCm/100)*(heightCm/100));
 	}
 }
