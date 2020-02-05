@@ -1,7 +1,12 @@
 public class Hero{
 	String name;
 	int hp;
+	Sword sword;
+	public Hero(){
+		this.hp=100;
+	}
 	public Hero(String name){
+		this();
 		this.name=name;
 	}
 	public void sleep(){
@@ -22,5 +27,15 @@ public class Hero{
 		System.out.println(this.name+"は、逃げ出した!");
 		System.out.println("GAMEOVER");
 		System.out.println("最終HPは"+this.hp+"でした");
+	}
+	public void equip(Sword sw){
+		System.out.println(sw.name+"を装備した！");
+		this.sword=sw;
+	}
+	public void attack(Matango m){
+		System.out.println(this.name+"はマタンゴ"+m.suffix+"を"+this.sword.name+"で攻撃した");
+		System.out.println(this.sword.damage+"のダメージを与えた");
+		m.hp-=this.sword.damage;
+
 	}
 }

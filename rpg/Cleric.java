@@ -12,7 +12,7 @@ public class Cleric{
 		this.mp-=5;
 		System.out.println("HPが最大まで回復した");
 	}
-	public void Aid(Hero h){
+	public void aid(Hero h){
 		System.out.println(this.name+"はエイドを唱えた!");	
 		h.hp+=10;
 		this.mp-=5;
